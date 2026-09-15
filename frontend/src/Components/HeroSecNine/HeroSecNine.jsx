@@ -13,7 +13,8 @@ const HeroSecNine = () => {
  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.post(`http://localhost:8282/api/v1/create-contact` , {fullName,email,phone,website,projectDescription})
+      const backendUrl = import.meta.env.VITE_BACKEND_URL_xenkora || '';
+const {data} = await axios.post(`${backendUrl}/api/v1/create-contact`, {fullName, email, phone, website, projectDescription});
     
       if (data.success) {
         toast.success('Form submitted successfully!');
