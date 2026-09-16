@@ -92,7 +92,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
-              <li><a href="/why-xenkora">Why Xenkora Technologies</a></li>
+              <li><Link to="/why-xenkora">Why Xenkora Technologies</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to="/privacy-policy">Privacy Policy</Link></li>
