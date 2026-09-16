@@ -1,0 +1,178 @@
+.about-hybrid-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #020617;
+    color: #f1f5f9;
+    padding: 2rem 1.5rem;
+    font-family: inherit;
+}
+
+/* Ambient subtle background lighting */
+.ambient-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-amber {
+    top: -15%;
+    left: 20%;
+    background: rgba(217, 119, 6, 0.08);
+}
+
+.glow-cyan {
+    top: 10%;
+    right: 15%;
+    background: rgba(6, 182, 212, 0.07);
+}
+
+.container-hybrid {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Badge styling */
+.badge-wrapper {
+    margin-bottom: 1.75rem;
+}
+
+.hybrid-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    backdrop-filter: blur(12px);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #cbd5e1;
+}
+
+.badge-dot-amber {
+    width: 6px;
+    height: 6px;
+    background-color: #d97706;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #d97706;
+}
+
+.badge-icon-cyan {
+    color: #06b6d4;
+}
+
+/* Title */
+.hybrid-title {
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    margin: 0 0 1.5rem 0;
+    color: #f8fafc;
+}
+
+.gradient-text-hybrid {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 35%, #d97706 70%, #b45309 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+}
+
+/* Description */
+.hybrid-description {
+    max-width: 680px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin: 0 auto 2rem auto;
+}
+
+/* Meta strip */
+.meta-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+}
+
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #94a3b8;
+}
+
+.meta-icon {
+    color: #38bdf8;
+}
+
+.meta-divider {
+    color: #334155;
+}
+
+/* CTAs - Excess bottom space removed */
+.hybrid-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.btn-primary-gradient-hybrid {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #78350f 100%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(217, 119, 6, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary-gradient-hybrid:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(217, 119, 6, 0.6);
+    color: #ffffff;
+}
+
+.btn-outline-glass-hybrid {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.85rem 1.75rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline-glass-hybrid:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
