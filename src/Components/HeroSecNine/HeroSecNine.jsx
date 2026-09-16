@@ -16,9 +16,9 @@ const HeroSecNine = () => {
     e.preventDefault();
     setLoading(true);
 
-    const serviceID = 'service_zr4va4x';      
-    const templateID = 'template_wf3w28w';   
-    const publicKey = 'Nv37BXe-8hYuojl5l';      
+    const serviceID = 'service_zr4va4x';
+    const templateID = 'template_wf3w28w';
+    const publicKey = 'Nv37BXe-8hYuojl5l';
 
     const templateParams = {
       fullName: fullName,
@@ -30,7 +30,7 @@ const HeroSecNine = () => {
 
     try {
       await emailjs.send(serviceID, templateID, templateParams, publicKey);
-      
+
       toast.success('Form submitted successfully!');
       setFullName("");
       setEmail("");
@@ -49,56 +49,56 @@ const HeroSecNine = () => {
     <section className="relative overflow-hidden contact-section" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* Form Column */}
           <div className="contact-form-box p-6 sm:p-8 lg:p-10 shadow-2xl shadow-black/80">
             <form onSubmit={handleSubmit}>
-              
+
               <div className="mb-5">
                 <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
                   Full Name *
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   className="custom-input w-full"
-                  placeholder="Enter your full name" 
-                  required 
+                  placeholder="Enter your full name"
+                  required
                 />
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Email Address *
+                  Email *
                 </label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="custom-input w-full"
-                  placeholder="name@company.com" 
-                  required 
+                  placeholder="name@company.com"
+                  required
                 />
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Mobile Number *
+                  Phone / WhatsApp Number
                 </label>
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="custom-input w-full"
-                  placeholder="e.g. +92 300 1234567" 
-                  required 
+                  placeholder="e.g. +92 300 1234567"
+                  required
                 />
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Website link *
+                  Website / Portfolio Link
                 </label>
                 <input
                   type="url"
@@ -112,20 +112,20 @@ const HeroSecNine = () => {
 
               <div className="mb-6">
                 <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Project Brief / Description *
+                 Project Description / Scope *
                 </label>
-                <textarea 
+                <textarea
                   value={projectDescription}
                   onChange={(e) => setProjectDescription(e.target.value)}
-                  rows="4" 
+                  rows="4"
                   className="custom-input w-full"
-                  placeholder="tell us about your project querry..." 
+                  placeholder="tell us about your project querry..."
                   required
                 ></textarea>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="custom-submit-btn w-full py-4 font-bold text-white shadow-xl shadow-amber-600/30 flex items-center justify-center gap-2 cursor-pointer"
                 disabled={loading}
               >
