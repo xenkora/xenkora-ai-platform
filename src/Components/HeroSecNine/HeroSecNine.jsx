@@ -1,34 +1,50 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2 } from 'lucide-react';
-import axios from 'axios'
+import { Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
-import './HeroSecNine.css'
+import './HeroSecNine.css';
+
 const HeroSecNine = () => {
   const [fullName, setFullName] = useState('');
-   const [email, setEmail] = useState('');
-   const [phone, setPhone] = useState('');
-   const [website, setWebsite] = useState('');
-   const [projectDescription, setProjectDescription] = useState('');
- 
- const handleSubmit = async (e) => {
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [website, setWebsite] = useState('');
+  const [projectDescription, setProjectDescription] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
+    const serviceID = 'service_zr4va4x';      
+    const templateID = 'template_wf3w28w';   
+    const publicKey = 'Nv37BXe-8hYuojl5l';      
+
+    const templateParams = {
+      fullName: fullName,
+      email: email,
+      phone: phone,
+      website: website,
+      projectDescription: projectDescription
+    };
+
     try {
-      const {data} = await axios.post(`http://localhost:8282/api/v1/create-contact` , {fullName,email,phone,website,projectDescription})
-    
-      if (data.success) {
-        toast.success('Form submitted successfully!');
-        setFullName("")
-        setEmail("")
-        setPhone("")
-        setProjectDescription("")
-        setWebsite("")
-      }
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      
+      toast.success('Form submitted successfully!');
+      setFullName("");
+      setEmail("");
+      setPhone("");
+      setProjectDescription("");
+      setWebsite("");
     } catch (error) {
-      console.log(error)
+      console.log(error);
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
     }
- };
-  
-  
+  };
+
   return (
     <section className="relative overflow-hidden contact-section" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -80,20 +96,19 @@ const HeroSecNine = () => {
                 />
               </div>
 
-              
-<div className="mb-5">
-              <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                 Website link *
+              <div className="mb-5">
+                <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                  Website link *
                 </label>
-              <input
-                type="url"
-                id="website"
+                <input
+                  type="url"
+                  id="website"
                   value={website}
-                   className="custom-input w-full"
-                onChange={(e) => setWebsite(e.target.value)}
-                placeholder="https://yourdomain.com"
-              />
-            </div>
+                  className="custom-input w-full"
+                  onChange={(e) => setWebsite(e.target.value)}
+                  placeholder="https://yourdomain.com"
+                />
+              </div>
 
               <div className="mb-6">
                 <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
@@ -112,8 +127,9 @@ const HeroSecNine = () => {
               <button 
                 type="submit" 
                 className="custom-submit-btn w-full py-4 font-bold text-white shadow-xl shadow-amber-600/30 flex items-center justify-center gap-2 cursor-pointer"
+                disabled={loading}
               >
-                <span>Send Project Brief</span>
+                <span>{loading ? 'Dispatching...' : 'Send Project Brief'}</span>
                 <Send className="w-5 h-5" />
               </button>
 
