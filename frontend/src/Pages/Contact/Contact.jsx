@@ -10,22 +10,31 @@ const Contact = () => {
   const [website, setWebsite] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-     const backendUrl = import.meta.env.VITE_BACKEND_URL_xenkora || '';
-const {data} = await axios.post(`${backendUrl}/api/v1/create-contact`, {fullName, email, phone, website, projectDescription});
+      // Agar Vercel env variable na mile, toh seedha Railway ka URL use ho jaye ga!
+      const backendUrl = import.meta.env.VITE_BACKEND_URL_xenkora || "https://xenkora-ai-platform-production.up.railway.app";
+      
+      const {data} = await axios.post(`${backendUrl}/api/v1/create-contact`, {
+        fullName, 
+        email, 
+        phone, 
+        website, 
+        projectDescription
+      });
     
       if (data.success) {
         toast.success('Form submitted successfully!');
-        setFullName("")
-        setEmail("")
-        setPhone("")
-        setProjectDescription("")
-        setWebsite("")
+        setFullName("");
+        setEmail("");
+        setPhone("");
+        setProjectDescription("");
+        setWebsite("");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
+      toast.error('Something went wrong!');
     }
   };
 
