@@ -72,19 +72,19 @@ const Contact = () => {
                 id="name"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder="Muhammad Arsal"
+                placeholder="Enter your full name"
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Work Email *</label>
+              <label htmlFor="email">Email *</label>
               <input
                 type="email"
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="arsal@xenkora.com"
+                 placeholder="name@company.com"
                 required
               />
             </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                 id="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="+92 300 0000000"
+                placeholder="e.g. +92 300 1234567"
               />
             </div>
 
