@@ -42,12 +42,17 @@ const Footer = () => {
                 </a>
               </div>
 
-              <div className="footer-contact-item">
-                <div className="footer-icon-box">
-                  <Mail className="w-4 h-4" />
-                </div>
-                <span>xenkoratechnologies@gmail.com</span>
-              </div>
+             <div className="footer-contact-item">
+  <a 
+    href="mailto:xenkoratechnologies@gmail.com?subject=Project%20Inquiry&body=Hi%20Xenkora%20Technologies,%20I%20want%20to%20discuss%20a%20project%20with%20you."
+    className="flex items-center gap-3 text-slate-300 hover:text-amber-400 transition-colors duration-200 no-underline"
+  >
+    <div className="footer-icon-box">
+      <Mail className="w-4 h-4" />
+    </div>
+    <span>xenkoratechnologies@gmail.com</span>
+  </a>
+</div>
 
               <div className="footer-contact-item">
                 <div className="footer-icon-box">
