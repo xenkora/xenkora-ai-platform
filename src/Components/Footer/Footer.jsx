@@ -26,12 +26,20 @@ const Footer = () => {
               Xenkora Technologies is a fully remote virtual digital agency engineering brands that dominate the digital world, strategy, code and AI under one roof. Serving founders and businesses across Pakistan, the GCC, UK and North America.
             </p>
 
-            <div className="space-y-2.5 pt-2">
+           <div className="space-y-2.5 pt-2">
+              {/* Clickable WhatsApp Number */}
               <div className="footer-contact-item">
-                <div className="footer-icon-box">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <span>+92 3222272737</span>
+                <a 
+                  href="https://wa.me/923222272737?text=Hi%20Xenkora%20Technologies,%20I%20found%20your%20contact%20number%20on%20your%20website%20and%20want%20to%20discuss%20a%20project." 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-slate-300 hover:text-amber-400 transition-colors duration-200 no-underline"
+                >
+                  <div className="footer-icon-box">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <span>+92 3222272737</span>
+                </a>
               </div>
 
               <div className="footer-contact-item">
