@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import './App.css';
+import ScrollToTop from './ScrollToTop';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
@@ -22,6 +23,7 @@ const App = () => {
     <div className="bg-slate-950 min-h-screen text-slate-100 flex flex-col justify-between">
       <div>
         <Navbar />
+         <ScrollToTop/>
         <Routes>
           <Route 
             path="/" 
