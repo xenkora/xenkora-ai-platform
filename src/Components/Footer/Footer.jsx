@@ -42,9 +42,11 @@ const Footer = () => {
                 </a>
               </div>
 
-             <div className="footer-contact-item">
+           <div className="footer-contact-item">
   <a 
-    href="mailto:xenkoratechnologies@gmail.com?subject=Project%20Inquiry&body=Hi%20Xenkora%20Technologies,%20I%20want%20to%20discuss%20a%20project%20with%20you."
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=xenkoratechnologies@gmail.com&su=Project%20Inquiry&body=Hi%20Xenkora%20Technologies,%20I%20want%20to%20discuss%20a%20project%20with%20you." 
+    target="_blank" 
+    rel="noopener noreferrer"
     className="flex items-center gap-3 text-slate-300 hover:text-amber-400 transition-colors duration-200 no-underline"
   >
     <div className="footer-icon-box">
