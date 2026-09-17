@@ -48,12 +48,12 @@ const PrivacyPolicy = () => {
             <div className="contact-meta-box">
               <div className="meta-row">
                 <Mail size={16} className="text-amber" />
-                <span><strong>Email:</strong> legal@xenkora.com / support@xenkora.com</span>
+                <span><strong>Email:</strong> xenkoratechnologies@gmail.com</span>
               </div>
-              <div className="meta-row">
+              {/* <div className="meta-row">
                 <Globe size={16} className="text-cyan" />
                 <span><strong>Website:</strong> https://xenkora.com</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
