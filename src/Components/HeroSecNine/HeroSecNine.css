@@ -1,0 +1,65 @@
+.contact-section {
+    position: relative;
+    overflow: hidden;
+    color: #f1f5f9;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.contact-form-box {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.custom-input {
+    background-color: rgba(2, 6, 23, 0.8) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(217, 119, 6, 0.3) !important;
+    border-radius: 8px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.custom-input:focus {
+    background-color: rgba(2, 6, 23, 0.95) !important;
+    color: #ffffff !important;
+    border-color: #fbbf24 !important;
+    box-shadow: 0 0 0 0.25rem rgba(217, 119, 6, 0.25) !important;
+    outline: none;
+}
+
+.custom-submit-btn {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    border-radius: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-submit-btn:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.35);
+}
+
+.hero-badge {
+    background: rgba(217, 119, 6, 0.1);
+    border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+.badge-dot,
+.perk-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #f59e0b;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #f59e0b;
+}

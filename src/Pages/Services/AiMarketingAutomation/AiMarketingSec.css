@@ -1,0 +1,142 @@
+.amf-section {
+    padding: 35px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.amf-glow {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: rgba(217, 119, 6, 0.08);
+    filter: blur(150px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.amf-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.amf-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.amf-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.amf-gradient-ai {
+    background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.amf-gradient-market {
+    background: linear-gradient(135deg, #fcd34d 0%, #d97706 40%, #b45309 75%, #78350f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.amf-white-text {
+    color: #ffffff;
+}
+
+.amf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.amf-card {
+    background: linear-gradient(180deg, rgba(22, 16, 43, 0.7) 0%, rgba(12, 8, 27, 0.9) 100%);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+    border-radius: 20px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.amf-card:hover {
+    border-color: rgba(252, 211, 77, 0.4);
+    box-shadow: 0 15px 35px -10px rgba(217, 119, 6, 0.15);
+    transform: translateY(-4px);
+}
+
+.amf-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.amf-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(244, 63, 94, 0.15) 100%);
+    border: 1px solid rgba(217, 119, 6, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon {
+    width: 24px;
+    height: 24px;
+    color: #fcd34d;
+}
+
+.amf-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #6b7280;
+    letter-spacing: 0.05em;
+}
+
+.amf-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.amf-card-desc {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .amf-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .amf-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amf-title {
+        font-size: 2.2rem;
+    }
+
+    .amf-section {
+        padding: 60px 16px;
+    }
+}

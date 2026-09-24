@@ -1,0 +1,195 @@
+.privacy-section {
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 1.5rem;
+    font-family: inherit;
+}
+
+/* Ambient glow matching theme */
+.ambient-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-amber {
+    top: 5%;
+    left: 10%;
+    background: rgba(217, 119, 6, 0.08);
+}
+
+.glow-cyan {
+    bottom: 10%;
+    right: 10%;
+    background: rgba(6, 182, 212, 0.07);
+}
+
+.privacy-container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header Card Split */
+.privacy-header-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    align-items: start;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    backdrop-filter: blur(16px);
+    margin-bottom: 2rem;
+}
+
+.privacy-tag {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    background: rgba(217, 119, 6, 0.1);
+    border: 1px solid rgba(217, 119, 6, 0.25);
+    border-radius: 9999px;
+    color: #fbbf24;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.privacy-header-card h1 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #f8fafc;
+    margin: 0 0 0.5rem 0;
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.header-right p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* Intro Box */
+.privacy-intro-box {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* Content Blocks */
+.privacy-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.policy-block h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0 0 0.85rem 0;
+    letter-spacing: -0.02em;
+}
+
+.policy-block h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin: 1.25rem 0 0.5rem 0;
+}
+
+.policy-block p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin: 0 0 1rem 0;
+}
+
+.policy-block ul {
+    margin: 0 0 1rem 0;
+    padding-left: 1.25rem;
+    color: #94a3b8;
+}
+
+.policy-block li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+}
+
+/* Meta contact box inside section 1 */
+.contact-meta-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.text-amber {
+    color: #fbbf24;
+}
+
+.text-cyan {
+    color: #38bdf8;
+}
+
+.text-emerald {
+    color: #10b981;
+}
+
+/* Highlight Callout */
+.highlight-callout {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    font-size: 0.92rem;
+    color: #d1fae5;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .privacy-header-card {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+    }
+
+    .privacy-section {
+        padding: 4rem 1rem;
+    }
+}
